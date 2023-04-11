@@ -12,6 +12,8 @@ const App = () => {
                 () => setCounter(counter + 1)
             }
             >Count</button>
+            <button onClick={ () => setCounter(counter - 1)}>DisCount</button>
+            <button onClick={ () => setCounter(counter * 4)}>Mutiply</button>
         </div>
     )
 }

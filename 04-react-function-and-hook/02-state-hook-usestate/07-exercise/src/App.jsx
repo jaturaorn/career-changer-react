@@ -2,37 +2,39 @@ import React, { useState } from 'react';
 
 function App() {
     // adding state here.
-
+    const [choices, setChoices] = useState();
   const handleClick = (value) => {
     // code here.
+    setChoices(value.target.textContent);
   };
 
   return (
     <div>
-      <button>Fullname</button>
-      <button>Age</button>
-      <button>Picture</button>
-      <DisplayInfo />
+      {/* ใช้แบบนี้ก็ได้ onclick{ () => handleClick('Fullname')} */}
+      <button onClick={(handleClick)}>Fullname</button>
+      <button onClick={(handleClick)}>Age</button>
+      <button onClick={(handleClick)}>Picture</button>
+      <DisplayInfo choices={choices} />
     </div>
   );
 }
 
 function DisplayInfo(props) {
 
-  let ___;
-  if (___ === 'Fullname') {
-    ___ = <h2>John Doe</h2>;
-  } else if (___ === 'Age') {
-    ___ = <h2>30</h2>;
-  } else if (___ === 'Picture') {
-    ___ = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
+  let InFourE = props.choices;
+  if (InFourE === 'Fullname') {
+    InFourE = <h2>John Doe</h2>;
+  } else if (InFourE === 'Age') {
+    InFourE = <h2>30</h2>;
+  } else if (InFourE === 'Picture') {
+    InFourE = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
   } else {
-    ___ = <p>Please select an option.</p>;
+    InFourE = <p>Please select an option.</p>;
   }
 
   return (
     <div>
-      {___}
+      {InFourE}
     </div>
   );
 }
