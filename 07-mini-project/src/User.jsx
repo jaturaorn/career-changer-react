@@ -1,7 +1,8 @@
+import Layout from "./Layout"
 
 const User = () => {
     return (
-        <div>USER</div>
+            <h1>This is HomePage</h1>
     )
 }
 
